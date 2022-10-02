@@ -1,0 +1,169 @@
+<html>
+  <head>
+    <title>OpenAPI Map v2 - UI Test</title>
+    <link rel="stylesheet" href="tree.css">
+  </head>
+  <body>
+    <ul class="tree">
+      <li>
+        <div>
+          <h1>Demo OpenAPI v3.1 Document</h1>
+          <div class="description">A demo OpenAPI document demonstrating seom features of the OpenAPI Specification version 3.1.</div>
+        </div>
+      </li>
+      <ul>
+        <li>
+          <div class="leaf">
+            <code class="openapi"><span class="property">openapi</span>: <span class="value">3.1.0</span></code>
+            <div class="description">The version of the OpenAPI Specification used</div>
+          </div>
+        </li>
+        <li>
+          <div class="node">
+            <code class="openapi"><span class="property">info</span>: </code>
+            <div class="description">General information about the API</div>
+          </div>
+          <ul>
+            <li>
+              <div class="leaf">
+                <code class="openapi"><span class="property">title</span>: <span class="value">Library API</span></code>
+                <div class="description">The name of the API</div>
+              </div>
+            </li>
+            <li>
+              <div class="leaf">
+                <code class="openapi"><span class="property">version</span>: <span class="value">"1.0"</span></code>
+                <div class="description">The version of the API</div>
+              </div>
+            </li>
+            <li>
+              <div class="leaf">
+                <code class="openapi"><span class="property">summary</span>: <span class="value">All you need to manage a library</span></code>
+                <div class="description">A short description of the API</div>
+              </div>
+            </li>
+            <li>
+              <div class="leaf">
+                <code class="openapi"><span class="property">description</span>: <span class="value"> |<pre>
+# What is the Library API?
+
+Lorem *ipsum* dolor sit amet, consectetur adipiscing elit. In posuere est sed dolor dictum vehicula. Aenean aliquet bibendum felis sed tempor. Curabitur efficitur magna tellus, vitae vulputate nibh sodales non. Pellentesque eros augue, consequat in mauris sed, mattis suscipit massa. Etiam nisl felis, malesuada ac nisl sed, egestas blandit leo. Curabitur at euismod eros. Proin a sapien velit.
+
+# Why use it?
+
+Curabitur vulputate iaculis purus, ac congue nulla dapibus ac. In congue ut lorem non blandit. Vivamus placerat felis eu metus porta, sit amet maximus lectus placerat. Nunc sagittis maximus turpis, et rhoncus est sodales vel. Suspendisse eget eros vestibulum elit placerat varius. Nulla lobortis lacinia nisi, in varius ipsum dignissim et. In quis orci lectus. Nam vitae purus nisl. Curabitur malesuada, ligula nec eleifend dictum, nulla neque consectetur ipsum, vitae varius libero nibh et ligula. Mauris aliquet porttitor magna eget commodo.
+              </pre></span></code>
+              <div class="description">A long, multiline and markdown compatible description of the API</div>
+              </div>
+            </li>
+            <li>
+              <div class="node">
+                <code class="openapi"><span class="property">contact</span>: </code>
+                <div class="description">Who to contact about the API</div>
+              </div>
+              <ul>
+                <li>
+                  <div class="leaf">
+                    <code class="openapi"><span class="property">name</span>:  <span class="value">Library Support Team</span></code>
+                    <div class="description">The name of the point of contact</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="leaf">
+                    <code class="openapi"><span class="property">email</span>:  <span class="value">support@library.com</span></code>
+                    <div class="description">The email of the point of contact</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="leaf">
+                    <code class="openapi"><span class="property">url</span>:  <span class="value">https://library.com/support/</span></code>
+                    <div class="description">The URL of the point of contact</div>     
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <div class="node">
+            <code class="openapi"><span class="property">servers</span>: </code>
+            <div class="description">The list of server hosting the API</div>     
+          </div>
+          <ul>
+            <li>
+              <div class="node">
+                <code class="openapi"><span class="array-item">[0]</span></code>     
+                <div class="description">A server hosting the API</div>
+              </div>
+              <ul>
+                <li>
+                  <div class="leaf">
+                    <code class="openapi"><span class="property">description</span>: <span class="value">Mock server</span></code>
+                    <div class="description">A name or a short description of the server</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="leaf">
+                    <code class="openapi"><span class="property">url</span>: <span class="value">https://api-mock.library.com/v1</span></code>
+                    <div class="description">The URL of the server</div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="node">
+                <code class="openapi"><span class="array-item">[1]</span></code>
+                <div class="description">A server hosting the API</div>     
+              </div>
+              <ul>
+                <li>
+                  <div class="leaf">
+                    <code class="openapi"><span class="property">description</span>: <span class="value">Production server</span></code>
+                    <div class="description">A name or a short description of the server</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="leaf">
+                    <code class="openapi"><span class="property">url</span>: <span class="value">https://api.library.com/v1/</span></code>
+                    <div class="description">The URL of the server</div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <div class="node">
+            <code class="openapi"><span class="property">paths</span>: </code>
+            <div class="description">The resource paths of the API</div>
+          </div>
+          <ul>
+            <li>
+              <div class="node">
+                <code class="openapi"><span class="property">/books</span>: </code>
+                <div class="description">A resource path</div>
+              </div>
+              <ul>
+                <li>
+                  <div class="node">
+                    <code class="openapi"><span class="property">get</span>: </code>
+                    <div class="description">An operation</div>
+                  </div>
+                  <ul>
+                    <li>
+                      <div class="leaf">
+                        <code class="openapi"><span class="property">summary</span>: <span class="value">Search for books</span></code>
+                        <div class="description">A short description of the operation</div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>     
+        </li>
+      </ul>
+    </ul>
+    <script src="tree.js"></script>
+  </body>
+</html>

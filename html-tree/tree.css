@@ -1,0 +1,98 @@
+:root {
+  --root: #8dccad;
+  --leaf: #f5cc7f;
+  --node: #7b9fe0;
+  --connector-color: green;
+  --connector-size: 1px;
+  --space: 10px;
+}
+
+.tree {
+  display: inline-flex;
+}
+
+.tree ul {
+  padding-left: var(--space);
+}
+
+.tree ul .closed {
+  visibility:hidden;
+  display: none;
+}
+
+.tree , .tree ul, .tree li {
+  list-style: none;
+}
+
+.tree li {
+  display: flex;
+}
+
+.tree li:first-child {
+  margin-top: 2rem;
+}
+
+/* All nodes */
+
+.tree li > *:first-child{
+  border: var( --connector-size) solid var( --connector-color);
+  border-radius: .4em;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  max-width: 500px;
+}
+
+.tree pre {
+  white-space:pre-wrap;
+  max-height: 150px;
+  overflow:auto;
+}
+
+.tree ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Connectors */
+
+.tree li:before {
+  background: var( --connector-color);
+  content: "";
+  width: 20px;
+  height: var( --connector-size);
+  top: 25px;
+  margin:0;
+  left:0;
+  position: relative;
+}
+
+.tree > li:before {
+  content: none;
+}
+
+/* OpenAPI documentation */
+
+.tree .property {
+  color: green;
+}
+
+.tree .value {
+  color: orange;
+}
+
+.tree .description {
+  padding-top: 0.2rem;
+  color: lightgrey;
+  font-family: monaco, Consolas, 'Lucida Console', monospace;
+  font-size: 0.8rem;
+  text-align: justify;
+}
+
+.tree .array-item {
+  color: blue;
+}
+
+.tree h1 {
+  font-family: monaco, Consolas, 'Lucida Console', monospace;
+  font-size: 1.5rem;
+}

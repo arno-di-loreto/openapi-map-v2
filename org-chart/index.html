@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <title>HTML CSS Org Chart</title>
+    <link rel="stylesheet" href="org-chart.css">
+  </head>
+  <body>
+    <div class="header">Inspired by <a href="https://webdesign.tutsplus.com/tutorials/horizontal-organizational-chart-css--cms-36645">CSS Charts: How to Create a Horizontal Organizational Chart</a></div>
+    <div class="tree">
+      <!-- Chart goes here -->
+      <h1 class="root rectangle">OpenAPI 3.1 Document</h1>
+      <ol class="node-wrapper">
+        <li>
+          <div class="leaf rectangle">
+            <span class="property">openapi</span>
+            <div class="description">The version of the specification used, not the version of the API which is in info.version</div>
+          </div>
+        </li>
+        <li>
+          <span class="node rectangle property">info</span>
+          <ol class="node-wrapper">
+            <li>
+              <h1 class="leaf rectangle">title</h1>
+            </li>
+            <li>
+              <h1 class="leaf rectangle">version</h1>
+            </li>
+            <li>
+              <h1 class="node rectangle">contact</h1>
+              <ol class="node-wrapper">
+                <li>
+                  <h4 class="leaf rectangle">name</h4>
+                </li>
+                <li>
+                  <h4 class="leaf rectangle">url</h4>
+                </li>
+                <li>
+                  <h4 class="leaf rectangle">email</h4>
+                </li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+        <li>
+          <h1 class="node rectangle">servers</h1>
+          <ol class="node-wrapper">
+            <li>
+              <h1 class="leaf rectangle">dummy</h1>
+            </li>
+            <li>
+              <h1 class="leaf rectangle">dummy</h1>
+            </li>
+            <li>
+              <h1 class="node rectangle">dummy</h1>
+            </li>
+          </ol>
+        </li>
+        <li>
+          <h1 class="node rectangle">tags</h1>
+        </li>
+        <li>
+          <h1 class="node rectangle">security</h1>
+        </li>
+        <li>
+          <h1 class="node rectangle">paths</h1>
+        </li>
+        <li>
+          <h1 class="node rectangle">components</h1>
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>

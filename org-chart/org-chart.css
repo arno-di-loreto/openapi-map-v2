@@ -1,0 +1,166 @@
+.header {
+  margin-bottom: 20px;
+}
+
+:root {
+  --root: #8dccad;
+  --leaf: #f5cc7f;
+  --node: #7b9fe0;
+  --black: black;
+  --margin-top: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ol {
+  list-style: none;
+}
+
+body {
+  margin: 50px 0 100px;
+  text-align: center;
+  font: 20px/1.5 "Inter", sans-serif;
+}
+
+.tree {
+  max-width: 800px;
+  padding: 0 10px;
+  margin: 0 auto;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-column-gap: 20px;
+  grid-template-columns: auto auto;
+}
+
+.rectangle {
+  position: relative;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/*CUSTOM VARIABLES HERE*/
+
+/* Root */
+
+.root {
+  background: var(--root);
+}
+
+.root::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 2px;
+  background: orange; /*var(--black);*/
+}
+
+/* Node */
+
+/*CUSTOM VARIABLES HERE*/
+ 
+.node-wrapper {
+  position: relative;
+  top: 34px;
+  padding-left: 20px;
+  border-left: 2px solid blue;/*var(--black);*/
+}
+ 
+.node-wrapper::before {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  width: 2px;
+  height: calc(100% + 40px);
+  background: var(--black);
+}
+ 
+.node-wrapper::after {
+  display: none;
+  content: "";
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  width: calc(100% - 10px);
+  height: 2px;
+  background: var(--black);
+}
+ 
+.node-wrapper > li {
+  margin-top: var(--margin-top);
+  position: relative;
+  display: grid;
+  align-items: flex-start;
+  grid-column-gap: 20px;
+  grid-template-columns: auto auto;
+}
+ 
+.node-wrapper > li:first-child {
+  margin-top: 0px;
+  align-items: flex-end;
+}
+ 
+.node {
+  background: var(--node);
+}
+ 
+.node::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 2px;
+  background: green; /*var(--black);*/
+}
+ 
+.node::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 2px;
+  background: red;/*var(--black);*/
+}
+
+/* Leaf */
+
+.leaf {
+  background: var(--leaf);
+}
+
+.leaf::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 2px;
+  background: pink;/*var(--black);*/
+}
+
+
+.property  {
+  font-family: monaco, Consolas, 'Lucida Console', monospace;
+  font-size: 1.5rem;
+}
+
+.description {
+  font-family: monaco, Consolas, 'Lucida Console', monospace;
+  font-size: 0.8rem;
+  text-align: justify;
+}
